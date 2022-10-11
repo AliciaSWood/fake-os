@@ -114,6 +114,7 @@ const modal1 = document.querySelector(".largebox");
 
 const icon1 = document.querySelector(".icons__icon1");
 
+// Modal 1
 // When the user clicks on the button, open the modal
 icon1.onclick = function() {
     modal1.style.display = "block";
@@ -126,6 +127,23 @@ closeButton.onclick = function() {
 }
 
 
+// Modal 2
+
+let modal2 = document.querySelector(".screen-image");
+let icon2 = document.querySelector(".icons__icon2")
+
+// When the user clicks on the button, open the modal
+icon2.onclick = function() {
+    modal2.style.visibility = "visible"
+}
+// When the user clicks on <span> (x), close the modal
+let closeButton2 = document.getElementsByClassName("close2")[0];
+closeButton2.onclick = function () {
+    modal2.style.visibility = "hidden";
+}
+
+
+
 
 const startModal = document.querySelector(".start-menu")
 
@@ -135,21 +153,12 @@ const startButton = document.querySelector(".footer__startButton");
 
 let isClosed = true;
 
-// startButton.onclick = function () {
-//     isClosed = !isClosed;
-//     console.log(isClosed)
-//     }
+startButton.addEventListener("click", () => {
+    isClosed = !isClosed;
 
-    if(isClosed) {
+    if (isClosed) {
         startModal.style.display = "none"
+    } else {
+        startModal.style.display = "block"
     }
-    else  {
-        startModal.style.display = "block";}
-
-        function clicking() {
-            isClosed = !isClosed
-            
-            }
-                      
-           
-startButton.addEventListener("click", clicking())
+});

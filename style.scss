@@ -24,9 +24,11 @@ body {
 
         &__startButton {
             background-image: linear-gradient(180deg, rgb(8, 170, 35), rgb(22, 126, 65));
-            width: 8vw;
+            width: 150px;
             height: 100%;
             border:none;
+            border-radius: 0px 15px 15px 0px;
+            color:white;
 
             &:hover {
                 cursor:pointer;
@@ -36,31 +38,46 @@ body {
 
 }
 
+@mixin iconContents {
+    display: flex;
+    flex-direction: column;
+}
+
 .icons {
-    width: 45vw;
+    width: 40vw;
     height: 15vh;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
     margin-left: 3vw;
     text-align: center;
     padding-top: 3vh;
 
 
+
     &__icon1 {
-        display: grid;
-        columns: 1fr;
+        @include iconContents();
+    }
 
-
-        &:hover {
-            opacity: 0.5;
-            cursor:pointer;
-        }
+    &__icon2 {
+        @include iconContents();
     }
 }
 
 .icon-text {
     font-size: 12px;
     color:white;
+    font-family: 'Segoe UI';
+}
+
+.icon-size {
+    width: 80px;
+    height: 80px;
+    &:hover {
+        opacity: 0.5;
+        cursor:pointer;
+    }
 }
 
 
@@ -83,26 +100,46 @@ body {
     background-color: grey;
     margin-left: 30vw;   
     display: none;
+    border: 2px solid black;
+    position: fixed;
+
 
     &__contentbox {
         background-color: #fefefe;
         margin: 15% auto; 
+        margin-bottom: 10px;
+        margin-top: 10px;
         height: 5vh;
         border: 1px solid #888;
         width: 90%; 
         display: flex;
         align-items: center;
-        justify-content: right;
+        justify-content: space-between;
+        text-align: center;
+        border: 2px solid black;
+
     }
 
 }
 
-.close {
+.textForBox {
+    display: flex;
+    width: 90%;
+    height: 68%;
+    margin-left: 1.5vw;
+    border: 2px solid black;
+}
+
+@mixin closeButtons {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     padding-right: 1vw;
+}
+
+.close {
+@include closeButtons();
 
   }
   .close:hover,
@@ -112,14 +149,42 @@ body {
   cursor: pointer;
 }
 
-.icon-notepad {
-    width: 80px;
-    height: 80px;
+.close2 {
+    @include closeButtons();
+
+  &:hover,
+  &:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}}
+
+
+.screen-image {
+    padding: 10px;
+    background-color: white;
+    position: fixed;
+    left: 45vw;
+    display: flex;
+    flex-basis: content;
+    flex-direction: column;
+    border: 2px solid black;
+    visibility: hidden;
+
 }
+
+.puppy-photo {
+    width: 400px;
+    height: 500px;
+}
+
+
+
+
 
 .start-menu {
     width:400px;
-    height:60vh;
+    height:63vh;
     background-image: linear-gradient(180deg, rgb(80, 80, 255), rgb(10, 10, 252));
     position: fixed;
     bottom: 0;
@@ -129,6 +194,7 @@ body {
     flex-direction: column;
     align-items: center;
     display: none;
+
  
 
     &__innerbox {
@@ -146,14 +212,24 @@ body {
     width: 198px;
     height: 43vh;
     border: 2px solid blue;
+}
 
+.column2 {
+    width: 198px;
+    height: 42.5vh;
+    border: 2px solid blue;
+    background-color: rgb(164, 201, 245);
+    color: rgb(18, 18, 100);
+    font-weight: bold;
+    padding: none;
+    padding-top: 4px;
 }
 
 ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    align-content:space-between;
     padding:0px;
     margin-top: 2px;
     margin:0px;
@@ -161,11 +237,48 @@ ul {
 }
 
 ul > li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+
+    padding: 6px;
+
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
 }
 
 .start-menu__icon {
     width: 40px;
     height: 40px;
+    
+}
+
+.menu-list {
+    display: flex;
+    align-items: center;
+
+}
+
+.buttonBox {
+    width: 98%;
+    height: 5vh;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-top: 3px;
+}
+
+.start-menu__officon {
+    width: 40px;
+    height: 40px;
+    padding-left: 5px;
+
+    &:hover {
+        opacity: 0.7;
+        cursor: pointer;
+    }
+
 }

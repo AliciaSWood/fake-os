@@ -15,39 +15,57 @@
         <!--Icons-->
         <div class = "icons">
             <div id = "icon" class = "icons__icon1" >
-                <img class = "icon-notepad" src = "assets/images/Notepad_Vista_10.png">
+                <img class = "icon-size" src = "assets/images/Notepad_Vista_10.png">
         <h4 class = "icon-text">Notepad.</h4>
         </div>
+        <div class = "icons__icon2"> <img class = "icon-size" src = "assets/images/dogs.png"><h4 class = "icon-text">dogs.png</h4></div>
+ 
+
         </div>
         
         <!--Modal 1-->
         <div class = "largebox">
-            <div class = "largebox__contentbox">
+            <div class = "largebox__contentbox"> &emsp;Notepad
                 <span class="close">&times;</span>
             </div>
+            <textarea class = "textForBox" placeholder="Type your notes..."></textarea>
         </div>
 
+        <!--Modal 2-->
+        <div class = "screen-image">
+            <span class="close2" id = "close2">&times;</span>
+            <img class = "puppy-photo" src = "assets/images/dogs.png">
+        </div>
 
 
         <!--Start Menu-->
-        <div class = "start-menu"><h2>User Name</h2>
+        <div class = "start-menu"><h2><img class = "start-menu__icon" src = "assets/images/emptyprofile.png">User Name</h2>
         <div class = "start-menu__innerbox">
             <div class = "column">
                 <ul>
-                    <li><img src = "assets/images/Internet_Explorer_6_logo.png" class = "start-menu__icon">Internet Explorer</li>
-                    <li><img src ="assets/images/email.icon.png" class = "start-menu__icon">E-mail</li>
-                    <li>Command Prompt</li>
-                    <li>MSN</li>
-                    <li>Windows Media Player</li>
-                    <li>Windows Messenger</li>
-                    <li>Notepad</li>
-                    <li>Tour Windows XP</li>
+                    <li class = "menu-list"><img src = "assets/images/Internet_Explorer_6_logo.png" class = "start-menu__icon"> &emsp;Internet Explorer</li>
+                    <li class = "menu-list"><img src ="assets/images/email.icon.png" class = "start-menu__icon">&emsp;E-mail</li>
+                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/commandprompt.png">&emsp;Command Prompt</li>
+                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/msn.png">&emsp;MSN</li>
+                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/mediaplayer.png">&nbsp;Windows Media Player</li>
+                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/messengericon.png">Windows Messenger</li>
+
                 </ul>
             </div>
-            <div class = "column"></div>
+            <div class = "column2">
+                <ul>
+                    <li>My Documents</li>
+                    <li>My Recent Documents</li>
+                    <li>My Pictures</li>
+                    <li>My Music</li>
+                    <li>My Computer</li>
+                </ul>
+            </div>
         </div>
+        <div class = "buttonBox"><img src = "assets/images/logoff.png" class = "start-menu__officon" >Log Off <img class = "start-menu__officon" src = "assets/images/poweroffbutton.png"> Turn Off Computer</div>
         </div>
 
+        <!--Bottom Taskbar-->
         <footer class = "footer">
 
             <button class = "footer__startButton">Start</button>
