@@ -1,0 +1,153 @@
+body {
+  margin: 0px;
+}
+
+.background-image {
+  height: 100vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/images/Bliss-background.jpg");
+}
+
+.footer {
+  background-image: linear-gradient(180deg, rgb(80, 80, 255), rgb(10, 10, 252));
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__startButton {
+  background-image: linear-gradient(180deg, rgb(8, 170, 35), rgb(22, 126, 65));
+  width: 8vw;
+  height: 100%;
+  border: none;
+}
+.footer__startButton:hover {
+  cursor: pointer;
+  background-image: linear-gradient(180deg, rgb(58, 179, 78), rgb(44, 124, 77));
+}
+
+.icons {
+  width: 45vw;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  margin-left: 3vw;
+  text-align: center;
+  padding-top: 3vh;
+}
+.icons__icon1 {
+  display: grid;
+  columns: 1fr;
+}
+.icons__icon1:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.icon-text {
+  font-size: 12px;
+  color: white;
+}
+
+#footer__clock {
+  width: 10vw;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgb(127, 127, 247), rgb(80, 80, 248));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.largebox {
+  width: 30vw;
+  height: 40vh;
+  background-color: grey;
+  margin-left: 30vw;
+  display: none;
+}
+.largebox__contentbox {
+  background-color: #fefefe;
+  margin: 15% auto;
+  height: 5vh;
+  border: 1px solid #888;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-right: 1vw;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icon-notepad {
+  width: 80px;
+  height: 80px;
+}
+
+.start-menu {
+  width: 400px;
+  height: 60vh;
+  background-image: linear-gradient(180deg, rgb(80, 80, 255), rgb(10, 10, 252));
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+.start-menu__innerbox {
+  width: 396px;
+  height: 43vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.column {
+  width: 198px;
+  height: 43vh;
+  border: 2px solid blue;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  padding: 0px;
+  margin-top: 2px;
+  margin: 0px;
+}
+
+ul > li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.start-menu__icon {
+  width: 40px;
+  height: 40px;
+}
