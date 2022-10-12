@@ -44,88 +44,24 @@ function Time() {
    }
    Time();
 
-   
 
-
-
-
-
-
-
-
-
-
-
-
-   const counter = document.getElementById("numberCounter");
-   const upButton = document.getElementById("upButton");
-   const downButton = document.getElementById("downButton");
-
-   // Add a listener that will listen to the click event on the button
-   // Write a function that will happen when the click event occurs
-
-//    const increaseCounter = () => {
-//         const number = +counter.innerText;
-//         counter.innerText = number + 1;
-//    }
-
-//    const decreaseCounter = () => {
-//     const number = +counter.innerText;
-//     counter.innerText = number - 1;
-// }
-
-//    upButton.addEventListener("click", increaseCounter);
-//    downButton.addEventListener("click", decreaseCounter);
-
-
-
-    // const icon = document.getElementById("icon");
-    
-    // const changeLargebox = () => {
-    //     const box = document.getElementsByClassName("largebox");
-    //     if(box.classList.contains("__hidden")) {
-    //         box.classList.remove("__hidden") 
-    //     } else {
-    //         box.classList.add("__hidden")
-    //     }
-    // }
-
-    // const toggleLargebox = () => {
-    //    const box = document.getElementsById("largebox")[0];
-    //    box.classList.toggle("largebox")
-    // }
-
-    // icon.addEventListener("click", changeLargebox);
-
-// let largeBox = document.querySelector(".largebox");
-// let isShow =true;
-// function showHide () {
-//     if(isShow) {
-//         largeBox.style.display = "none"
-//         isShow = false;
-//     } else {
-//         largeBox.style.display = "block"
-//         isShow = true;
-//     }
-
-// }
-
+// Modal 1
 const modal1 = document.querySelector(".largebox");
 
 const icon1 = document.querySelector(".icons__icon1");
 
-// Modal 1
 // When the user clicks on the button, open the modal
-icon1.onclick = function() {
+
+icon1.addEventListener("click", () => {
     modal1.style.display = "block";
-}
+})
 
 // When the user clicks on <span> (x), close the modal
 let closeButton = document.getElementsByClassName("close")[0];
-closeButton.onclick = function() {
-    modal1.style.display = "none";
-}
 
+closeButton.addEventListener("click", () => {
+    modal1.style.display = "none";
+})
 
 // Modal 2
 
@@ -133,17 +69,16 @@ let modal2 = document.querySelector(".screen-image");
 let icon2 = document.querySelector(".icons__icon2")
 
 // When the user clicks on the button, open the modal
-icon2.onclick = function() {
+icon2.addEventListener("click", () => {
     modal2.style.visibility = "visible"
-}
+}) 
+
 // When the user clicks on <span> (x), close the modal
 let closeButton2 = document.getElementsByClassName("close2")[0];
-closeButton2.onclick = function () {
+
+closeButton2.addEventListener("click", () => {
     modal2.style.visibility = "hidden";
-}
-
-
-
+})
 
 
 // Modal 3
@@ -151,23 +86,15 @@ let modal3 = document.getElementById("calcContainer");
 let icon3 = document.querySelector(".icons__icon3")
 
 // When the user clicks on the button, open the modal
-icon3.onclick = function() {
+icon3.addEventListener("click", () => {
     modal3.style.display = "block";
-}
+})
+
 // When the user clicks on <span> (x), close the modal
 let closeButton3 = document.getElementById("close3")
-closeButton3.onclick = function () {
+closeButton3.addEventListener("click", () => {
     modal3.style.display = "none";
-}
-
-console.log(icon3)
-console.log(modal3)
-
-
-
-
-
-
+})
 
 
 // Start Menu
@@ -175,7 +102,7 @@ const startModal = document.querySelector(".start-menu")
 
 const startButton = document.querySelector(".footer__startButton");
 
-// When the user clicks on start, open the start menu modal
+// When the user clicks on start, open/close the start menu modal
 
 let isClosed = true;
 
@@ -183,10 +110,11 @@ startButton.addEventListener("click", () => {
     isClosed = !isClosed;
 
     if (isClosed) {
-        startModal.style.display = "none"
+        startModal.style.display = "none" 
     } else {
         startModal.style.display = "block"
     }
+
 });
 
 // Calculator
