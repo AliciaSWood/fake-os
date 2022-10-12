@@ -29,13 +29,22 @@ body {
             border:none;
             border-radius: 0px 15px 15px 0px;
             color:white;
-
+            font-family: 'Segoe UI';
+            font-weight: bold;
+            font-size: 18px;
+            font-style: italic;
+            
             &:hover {
                 cursor:pointer;
                 background-image: linear-gradient(180deg, rgb(58, 179, 78), rgb(44, 124, 77));
               }
         }
 
+}
+
+.startButton-window {
+    width: 20px;
+    height: 20px;
 }
 
 @mixin iconContents {
@@ -50,9 +59,9 @@ body {
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
-    margin-left: 3vw;
     text-align: center;
     padding-top: 3vh;
+
 
 
 
@@ -102,6 +111,8 @@ body {
     display: none;
     border: 2px solid black;
     position: fixed;
+    left: 20vw;
+    bottom: 50vh;
 
 
     &__contentbox {
@@ -144,7 +155,7 @@ body {
   }
   .close:hover,
   .close:focus {
-  color: black;
+  color: rgb(221, 80, 80);
   text-decoration: none;
   cursor: pointer;
 }
@@ -154,7 +165,7 @@ body {
 
   &:hover,
   &:focus {
-  color: black;
+  color: rgb(221, 80, 80);
   text-decoration: none;
   cursor: pointer;
 }}
@@ -164,7 +175,8 @@ body {
     padding: 10px;
     background-color: white;
     position: fixed;
-    left: 45vw;
+    left: 20vw;
+    bottom: 30vh;
     display: flex;
     flex-basis: content;
     flex-direction: column;
@@ -194,6 +206,7 @@ body {
     flex-direction: column;
     align-items: center;
     display: none;
+    box-shadow: 5px 5px 10px;
 
  
 
@@ -223,6 +236,7 @@ body {
     font-weight: bold;
     padding: none;
     padding-top: 4px;
+    text-align: left;
 }
 
 ul {
@@ -281,4 +295,56 @@ ul > li {
         cursor: pointer;
     }
 
+}
+
+// Calculator
+.calcContainer {
+ width: 400px;   
+ margin: 10vh auto 0 auto;
+ background-color: white;
+ box-shadow: 5px 5px 10px;
+ position: fixed;
+ left: 50vw;
+ bottom: 10vh;
+ display:none;
+}
+
+#display {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 20px;
+    background-color: black;
+    color:white;
+}
+
+.buttons {
+    display:grid;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 20px;
+}
+.buttons > div {
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+}
+
+.button {
+    border: 0.5px solid grey;
+    line-height: 100px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#equals {
+    background-color: rgb(182, 5, 182);
+    &:hover {
+        background-color: orange;
+    }
 }

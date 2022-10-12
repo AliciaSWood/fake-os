@@ -145,6 +145,32 @@ closeButton2.onclick = function () {
 
 
 
+
+// Modal 3
+let modal3 = document.getElementById("calcContainer");
+let icon3 = document.querySelector(".icons__icon3")
+
+// When the user clicks on the button, open the modal
+icon3.onclick = function() {
+    modal3.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+let closeButton3 = document.getElementById("close3")
+closeButton3.onclick = function () {
+    modal3.style.display = "none";
+}
+
+console.log(icon3)
+console.log(modal3)
+
+
+
+
+
+
+
+
+// Start Menu
 const startModal = document.querySelector(".start-menu")
 
 const startButton = document.querySelector(".footer__startButton");
@@ -162,3 +188,32 @@ startButton.addEventListener("click", () => {
         startModal.style.display = "block"
     }
 });
+
+// Calculator
+
+let display = document.getElementById("display");
+
+let buttons = Array.from(document.getElementsByClassName('button'))
+
+buttons.map(button => {
+    button.addEventListener("click", (e) => {
+        switch(e.target.innerText) {
+            case 'AC':
+                display.innerText = "";
+                break;
+            case '←':
+                    display.innerText = display.innerText.slice(0, -1)
+                    break;
+
+            case '=':
+                try{
+                    display.innerText = eval(display.innerText)
+                } catch {
+                    display.innerText = "Whoops!";
+                }
+                    break;
+            default:
+                display.innerText += e.target.innerText;
+        }
+    })
+})
