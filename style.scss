@@ -59,21 +59,28 @@ body {
 @mixin iconContents {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &:hover {
         opacity: 0.5;
         cursor:pointer;
     }
 }
 
+a:link {
+    text-decoration: none;
+}
+
 .icons {
-    width: 30vw;
+    width: 600px;
     height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: row;
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 2vh;
+    text-decoration: none;
 
     &__icon1 {
         @include iconContents();
@@ -86,6 +93,10 @@ body {
     &__icon3 {
         @include iconContents();
     }
+    &__icon4 {
+        @include iconContents();
+
+    }
 }
 
 .icon-text {
@@ -95,9 +106,8 @@ body {
 }
 
 .icon-size {
-    width: 80px;
-    height: 80px;
-
+    width: 70px;
+    height: 70px;
 }
 
 
@@ -109,10 +119,10 @@ body {
     margin-left: 30vw;   
     display: none;
     border: 2px solid black;
-    position: fixed;
+    position: absolute;
     left: 20vw;
     bottom: 50vh;
-
+    font-family: 'Segoe UI';
 
     &__contentbox {
         background-color: #fefefe;
@@ -127,7 +137,6 @@ body {
         justify-content: space-between;
         text-align: center;
         border: 2px solid black;
-
     }
 
 }

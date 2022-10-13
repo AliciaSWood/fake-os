@@ -49,19 +49,26 @@ body {
   background-image: linear-gradient(180deg, rgb(58, 179, 78), rgb(44, 124, 77));
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .icons {
-  width: 30vw;
+  width: 600px;
   height: 15vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
   text-align: center;
-  padding-top: 3vh;
+  padding-top: 2vh;
+  text-decoration: none;
 }
 .icons__icon1 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .icons__icon1:hover {
   opacity: 0.5;
@@ -70,6 +77,8 @@ body {
 .icons__icon2 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .icons__icon2:hover {
   opacity: 0.5;
@@ -78,8 +87,20 @@ body {
 .icons__icon3 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .icons__icon3:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.icons__icon4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icons__icon4:hover {
   opacity: 0.5;
   cursor: pointer;
 }
@@ -91,8 +112,8 @@ body {
 }
 
 .icon-size {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .largebox {
@@ -102,9 +123,10 @@ body {
   margin-left: 30vw;
   display: none;
   border: 2px solid black;
-  position: fixed;
+  position: absolute;
   left: 20vw;
   bottom: 50vh;
+  font-family: "Segoe UI";
 }
 .largebox__contentbox {
   background-color: #fefefe;

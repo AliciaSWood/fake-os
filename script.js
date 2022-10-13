@@ -1,48 +1,34 @@
-
-function Time() {
-    // Creating object of the Date class
-    var date = new Date();
-    // Get current hour
-    var hour = date.getHours();
-    // Get current minute
-    var minute = date.getMinutes();
+setInterval(clock, 1000);
+// Create function
+function clock() {
+    // Create time variables.
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = "PM";
  
-    // Variable to store AM / PM
-    var period = "";
-    // Assigning AM / PM according to the current hour
-    if (hour >= 12) {
-    period = "PM";
-    } else {
-    period = "AM";
-    }
-    // Converting the hour in 12-hour format
-    if (hour == 0) {
-    hour = 12;
-    } else {
     if (hour > 12) {
-    hour = hour - 12;
+        hour -= 12;
+        am_pm = "PM";
     }
+    if (hour == 0) {
+        hr = 12;
+        am_pm = "AM";
     }
-    // Updating hour and minute if they are less than 10
-    hour = update(hour);
-    minute = update(minute);
+ 
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
 
-    // Adding time elements to the div
-    document.getElementById("footer__clock").innerText = hour + " : " + minute + "  "  + period;
-    // Set Timer to 1 sec (1000 ms)
-    // setTimeout(Time, 1000);
-   }
-    // Function to update time elements if they are less than 10
-    // Append 0 before time elements if they are less than 10
-   function update(t) {
-    if (t < 10) {
-    return "0" + t;
-    }
-    else {
-    return t;
-    }
-   }
-   Time();
+    // Display the time, but don't include seconds on display
+    let currentTime = hour + ":"
+            + min + " " + am_pm;
+ 
+    document.getElementById("footer__clock")
+            .innerHTML = currentTime;
+}
+clock();
 
 
 // Modal 1
@@ -62,6 +48,7 @@ let closeButton = document.getElementsByClassName("close")[0];
 closeButton.addEventListener("click", () => {
     modal1.style.display = "none";
 })
+
 
 // Modal 2
 
@@ -116,6 +103,16 @@ startButton.addEventListener("click", () => {
     }
 
 });
+
+// When the user clicks anywhere outside of the start modal or start button, close it
+
+document.addEventListener("click", (event) => {
+    if (event.target != startButton, startModal) {
+        console.log("closing")
+        startModal.style.display = "none";
+      }
+}, true)
+
 
 // Calculator
 
