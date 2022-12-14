@@ -1,119 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fake OS</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!--Background image-->
-    <div class = "background-image">
-        <!--Icons-->
-        <div class = "icons">
-            <!--Icon 1/Notepad-->
-            <div id = "icon" class = "icons__icon1" >
-                <img class = "icon-size" src = "assets/images/Notepad_Vista_10.png">
-        <h4 class = "icon-text">Notepad</h4>
+    <div class="background-image">
+      <!--Icons-->
+      <div class="icons">
+        <!--Icon 1/Notepad-->
+        <div id="icon" class="icons__icon1">
+          <img class="icon-size" src="assets/images/Notepad_Vista_10.png" />
+          <h4 class="icon-text">Notepad</h4>
         </div>
         <!--Icon 2/Dog Image-->
-        <div class = "icons__icon2"> 
-            <img class = "icon-size" src = "assets/images/dogs.png"><h4 class = "icon-text">dogs.png</h4></div>
-            <!--Icon 3/Calculator-->
-            <div id = "icon" class = "icons__icon3" >
-                <img class = "icon-size" src = "assets/images/calculator.png"><h4 class = "icon-text">Calculator</h4></div>
+        <div class="icons__icon2">
+          <img class="icon-size" src="assets/images/dogs.png" />
+          <h4 class="icon-text">dogs.png</h4>
+        </div>
+        <!--Icon 3/Calculator-->
+        <div id="icon" class="icons__icon3">
+          <img class="icon-size" src="assets/images/calculator.png" />
+          <h4 class="icon-text">Calculator</h4>
+        </div>
         <!--Icon 3/Internet-->
-        <a href = "https://www.google.com/" target="_blank">
-        <div id = "icon" class = "icons__icon4" >
-           
-                <img class = "icon-size" src = "assets/images/Internet_Explorer_6_logo.png">
-                <h4 class = "icon-text">Internet Explorer</h4>
-            
+        <a href="https://www.google.com/" target="_blank">
+          <div id="icon" class="icons__icon4">
+            <img
+              class="icon-size"
+              src="assets/images/Internet_Explorer_6_logo.png"
+            />
+            <h4 class="icon-text">Internet Explorer</h4>
+          </div>
+        </a>
+      </div>
+      <!--Modal 1/Notepad-->
+      <div class="largebox">
+        <div class="largebox__contentbox" id="header">
+          <h2>&nbsp;Notepad</h2>
+          <span class="close">&times;</span>
         </div>
-    </a>
+        <textarea
+          class="textForBox"
+          placeholder="Type your notes..."
+        ></textarea>
+      </div>
 
+      <!--Modal 2/Dog Picture-->
+      <div class="screen-image">
+        <span class="close2" id="close2">&times;</span>
+        <img class="puppy-photo" src="assets/images/dogs.png" />
+      </div>
+
+      <!--Modal 3/Calculator-->
+      <section>
+        <div class="calcContainer" id="calcContainer">
+          <span class="close" id="close3">&times;</span>
+          <div id="display"></div>
+          <div class="buttons">
+            <div class="button">AC</div>
+            <div class="button">/</div>
+            <div class="button">*</div>
+            <div class="button">←</div>
+            <div class="button">7</div>
+            <div class="button">8</div>
+            <div class="button">9</div>
+            <div class="button">-</div>
+            <div class="button">4</div>
+            <div class="button">5</div>
+            <div class="button">6</div>
+            <div class="button">+</div>
+            <div class="button">1</div>
+            <div class="button">2</div>
+            <div class="button">3</div>
+            <div class="button">.</div>
+            <div class="button">(</div>
+            <div class="button">0</div>
+            <div class="button">)</div>
+            <div id="equals" class="button">=</div>
+          </div>
+        </div>
+      </section>
+
+      <!--Start Menu-->
+      <div class="start-menu" id="start-menu">
+        <div class="username-box">
+          <img class="start-menu__icon" src="assets/images/emptyprofile.png" />
+          <h3>&nbsp;User Name</h3>
+        </div>
+        <div class="start-menu__innerbox">
+          <div class="column">
+            <ul>
+              <li class="menu-list">
+                <img
+                  src="assets/images/Internet_Explorer_6_logo.png"
+                  class="start-menu__icon"
+                />
+                &emsp;Internet Explorer
+              </li>
+              <li class="menu-list">
+                <img
+                  src="assets/images/email.icon.png"
+                  class="start-menu__icon"
+                />&emsp;E-mail
+              </li>
+              <li class="menu-list">
+                <img
+                  class="start-menu__icon"
+                  src="assets/images/commandprompt.png"
+                />&emsp;Command Prompt
+              </li>
+              <li class="menu-list">
+                <img
+                  class="start-menu__icon"
+                  src="assets/images/msn.png"
+                />&emsp;MSN
+              </li>
+              <li class="menu-list">
+                <img
+                  class="start-menu__icon"
+                  src="assets/images/mediaplayer.png"
+                />&nbsp;Windows Media Player
+              </li>
+              <li class="menu-list">
+                <img
+                  class="start-menu__icon"
+                  src="assets/images/messengericon.png"
+                />Windows Messenger
+              </li>
+            </ul>
+          </div>
+          <div class="column2">
+            <ul>
+              <li>My Documents</li>
+              <li>My Recent Documents</li>
+              <li>My Pictures</li>
+              <li>My Music</li>
+              <li>My Computer</li>
+            </ul>
+          </div>
+        </div>
+        <div class="buttonBox">
+          <img src="assets/images/logoff.png" class="start-menu__officon" />Log
+          Off
+          <img
+            class="start-menu__officon"
+            src="assets/images/poweroffbutton.png"
+          />
+          Turn Off Computer
+        </div>
+      </div>
+
+      <!--Bottom Taskbar-->
+      <footer class="footer">
+        <button class="footer__startButton">
+          <img
+            class="startButton-window"
+            src="assets/images/windowsxp.png"
+          />start
+        </button>
+        <div id="footer__clock"></div>
+      </footer>
     </div>
-        <!--Modal 1/Notepad-->
-        <div class = "largebox">
-            <div class = "largebox__contentbox" id="header"><h2>&nbsp;Notepad</h2>
-                <span class="close">&times;</span>
-            </div>
-            <textarea class = "textForBox" placeholder="Type your notes..."></textarea>
-        </div>
-
-        <!--Modal 2/Dog Picture-->
-        <div class = "screen-image">
-            <span class="close2" id = "close2">&times;</span>
-            <img class = "puppy-photo" src = "assets/images/dogs.png">
-        </div>
-
-        <!--Modal 3/Calculator-->
-        <section>
-            <div class = "calcContainer" id = "calcContainer">
-                <span class="close" id = "close3">&times;</span>
-                <div id="display"></div>
-                <div class = "buttons">
-                <div class="button">AC</div>
-                <div class="button">/</div>
-                <div class="button">*</div>
-                <div class="button">←</div>
-                <div class="button">7</div>
-                <div class="button">8</div>
-                <div class="button">9</div>
-                <div class="button">-</div>
-                <div class="button">4</div>
-                <div class="button">5</div>
-                <div class="button">6</div>
-                <div class="button">+</div>
-                <div class="button">1</div>
-                <div class="button">2</div>
-                <div class="button">3</div>
-                <div class="button">.</div>
-                <div class="button">(</div>
-                <div class="button">0</div>
-                <div class="button">)</div>
-                <div id = "equals" class="button">=</div>
-            </div>
-            </div>
-        </section>
-
-        <!--Start Menu-->
-        <div class = "start-menu" id = "start-menu">
-            <div class = "username-box"><img class = "start-menu__icon" src = "assets/images/emptyprofile.png"><h3>&nbsp;User Name</h3></div>
-        <div class = "start-menu__innerbox">
-            <div class = "column">
-                <ul>
-                    <li class = "menu-list"><img src = "assets/images/Internet_Explorer_6_logo.png" class = "start-menu__icon"> &emsp;Internet Explorer</li>
-                    <li class = "menu-list"><img src ="assets/images/email.icon.png" class = "start-menu__icon">&emsp;E-mail</li>
-                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/commandprompt.png">&emsp;Command Prompt</li>
-                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/msn.png">&emsp;MSN</li>
-                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/mediaplayer.png">&nbsp;Windows Media Player</li>
-                    <li class = "menu-list"><img class = "start-menu__icon" src = "assets/images/messengericon.png">Windows Messenger</li>
-                </ul>
-            </div>
-            <div class = "column2">
-                <ul>
-                    <li>My Documents</li>
-                    <li>My Recent Documents</li>
-                    <li>My Pictures</li>
-                    <li>My Music</li>
-                    <li>My Computer</li>
-                </ul>
-            </div>
-        </div>
-        <div class = "buttonBox"><img src = "assets/images/logoff.png" class = "start-menu__officon" >Log Off <img class = "start-menu__officon" src = "assets/images/poweroffbutton.png"> Turn Off Computer</div>
-        </div>
-
-        <!--Bottom Taskbar-->
-        <footer class = "footer">
-
-            <button class = "footer__startButton"><img class = startButton-window src = "assets/images/windowsxp.png">start</button>
-            <div id = "footer__clock"></div>
-        </footer>
-    </div> 
-</body>
-
+  </body>
 </html>
